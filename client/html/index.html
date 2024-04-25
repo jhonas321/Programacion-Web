@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="icon" href="imagenes/DreamSoft.png" />
+    <link 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    rel="stylesheet" href="estilosLogin.css"/>
+    <style>
+        
+        body {
+          min-height: 100vh;
+          overflow-y: hidden;
+
+          margin: 0;
+          padding: 0;
+          background: linear-gradient(rgba(5,7,12, 0.75), rgba(5,7,12, 0.75)), url(../imagenes/fondo_webPC.jpeg) no-repeat center center fixed;
+        }
+        button {
+            background-color: #4C44A0 !important;
+            color: #fff !important;
+        }
+      </style>
+  </head>
+
+
+<body class="bg-primary-subtle">
+
+    <div class="d-flex justify-content-center m-5">
+        <img
+                src="../imagenes/logo-fcyt.png"
+                class="img-fluid"
+                style="max-width: 150px"
+              />
+    </div>
+
+    <div class="container mt-3">
+        <form class="form" id="loginForm">
+          <h2 class="form_title h2-responsive text-center">Inicia Sesión</h2>
+          
+          
+           <div class="form_container mt-5">
+                <div class="form-group">
+                   <input type="text" class="form-control" id="usuario" name="usuario" required placeholder=" ">
+                   <label for="usuario" class="form_label">Usuario:</label>
+                   <span class="form_line"></span>
+                </div>
+    
+                <div class="form-group">
+        
+                   <input type="password" class="form-control" id="contrasena" name="contrasena" requiredplaceholder=" ">
+  
+                   <label for="contrasena" class="form_label">Contraseña:</label>
+                   <span class="form_line"></span>
+                   
+                </div>
+              <div class="text-center">
+                 <button type="submit" class="btn form_submit">Entrar</button>
+              </div>       
+           
+          </div>
+       </form>
+    </div>
+
+ <script src="../js/loginn.js"></script>   
+</body>
+</html>

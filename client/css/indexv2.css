@@ -1,0 +1,63 @@
+/*Fuente Montserrat*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Fondo de Pantalla*/
+body {
+    font-family: "Montserrat";
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url(../imagenes/fondo_webPC.jpeg) no-repeat center center fixed;
+    background-size: cover;
+}
+/*Contraste*/
+body::before{
+    content: "";
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgb(0, 0, 0);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#loginForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #00bca3;
+    padding: 50px;
+    border-radius: 4%;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+p, .ingresar {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.usuario, .contrasena {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+button {
+    border: solid 0;
+    border-radius: 4px;
+    padding: 7px;
+    cursor: pointer;
+    background-color: black;
+    color: #00bca3;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}

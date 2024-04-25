@@ -1,0 +1,65 @@
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.custom-table th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #ddd;
+}
+
+
+@media screen and (max-width: 768px) {
+    .custom-table, .custom-table thead, .custom-table tbody, .custom-table th, .custom-table td, .custom-table tr {
+        display: block;
+    }
+
+    .custom-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .custom-table tr { margin-bottom: .625em; }
+    .custom-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .custom-table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-column);
+    }
+
+    .custom-table td:nth-of-type(1):before { content: "#"; }
+    .custom-table td:nth-of-type(2):before { content: "Nombre"; }
+    .custom-table td:nth-of-type(2):before { content: "Numero"; }
+    .custom-table td:nth-of-type(3):before { content: "Capacidad"; }
+    .custom-table td:nth-of-type(4):before { content: "Descripcion"; }
+    .custom-table td:nth-of-type(5):before { content: "Fecha"; }
+    .custom-table td:nth-of-type(6):before { content: "Hora entrada"; }
+    .custom-table td:nth-of-type(7):before { content: "Hora salida"; }
+    .custom-table td:nth-of-type(8):before { content: "Estado"; }
+}
+

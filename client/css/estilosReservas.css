@@ -1,0 +1,71 @@
+.table-responsive {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.table-responsive table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-responsive th, .table-responsive td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.table-responsive th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+
+.table-responsive tbody tr.estado-pendiente {
+    background-color: yellow;
+}
+
+.table-responsive tbody tr.estado-aceptado {
+    background-color: lightgreen;
+}
+
+.table-responsive tbody tr.estado-rechazado {
+    background-color: rgb(240, 108, 93);
+}
+
+@media screen and (max-width: 768px) {
+    .table-responsive table, .table-responsive thead, .table-responsive tbody, .table-responsive th, .table-responsive td, .table-responsive tr {
+        display: block;
+    }
+
+    .table-responsive thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table-responsive tr { margin-bottom: .625em; }
+    .table-responsive td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .table-responsive td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-column);
+    }
+
+    .table-responsive td:nth-of-type(1):before { content: "Tipo"; }
+    .table-responsive td:nth-of-type(2):before { content: "Número"; }
+    .table-responsive td:nth-of-type(3):before { content: "Capacidad"; }
+    .table-responsive td:nth-of-type(4):before { content: "Descripción"; }
+    .table-responsive td:nth-of-type(5):before { content: "Facilidades"; }
+    .table-responsive td:nth-of-type(6):before { content: "Fecha"; }
+    .table-responsive td:nth-of-type(7):before { content: "Periodo"; }
+    .table-responsive td:nth-of-type(8):before { content: "Estado"; }
+}

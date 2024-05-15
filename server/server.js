@@ -16,7 +16,7 @@ app.use('/node_modules', express.static(path.join(__dirname, '../node_modules'))
 
 
 app.get('/', (req, res) => {
-    const filePath = path.join(__dirname, '../client/html/indexv2.html');
+    const filePath = path.join(__dirname, '../client/html/index.html');
     res.sendFile(filePath);
 });
 
